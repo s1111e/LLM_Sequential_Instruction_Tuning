@@ -26,8 +26,6 @@ cd LLM_Sequential_Instruction_Tuning
 # Create virtual environment
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# OR
-venv\Scripts\activate  # Windows
 ```
 
 ### 2. Install Dependencies
@@ -82,7 +80,7 @@ Create `.env` file:
 # Teacher Model API Configuration (optional)
 # Uncomment if using external teacher model API
 # OPENAI_API_KEY=your_api_key_here
-# TEACHER_MODEL_BASE_URL=http://10.246.100.230/v1
+# TEACHER_MODEL_BASE_URL= your_base_url
 # TEACHER_MODEL_NAME=llama-3.3-70b-instruct-awq
 ```
 
@@ -90,8 +88,8 @@ Create `.env` file:
 
 ## Project Structure
 
+```
 HW3/
-│
 ├── sft-lora-phi-2-alpaca...       # Stage 1 trained model (Alpaca)
 ├── sft-lora-phi-2-json...         # Stage 2 trained model (default)
 ├── sft-lora-phi-2-json-epoch1...  # Ablation: 1 epoch model
@@ -122,7 +120,7 @@ HW3/
 ├── *.out / *.err                 # Training logs
 │
 └── README.md                     # Final report
-
+```
 
 The pipeline is modular and allows independent execution of training, evaluation, and analysis components.
 
