@@ -1,0 +1,43 @@
+===== START =====
+Tue Apr  7 04:05:44 CDT 2026
+gpu004
+Tue Apr  7 04:05:44 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 545.23.08              Driver Version: 545.23.08    CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          On  | 00000000:3B:00.0 Off |                  Off |
+| N/A   29C    P0              25W / 250W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+===== ENV READY =====
+/work/amd456/llm_clean_env/bin/python
+Python 3.10.14
+===== STAGE 2 TRAIN =====
+Train size: 261
+Val size: 29
+Output directory: ./sft-lora-phi-2-json-r32-a64-d0.05-lr2.0e-05-wd0.01
+Max sequence length: 2048
+Train dataset size:      261
+Validation dataset size: 29
+trainable params: 47,185,920 || all params: 2,826,869,760 || trainable%: 1.6692
+{'eval_loss': '1.748', 'eval_runtime': '9.583', 'eval_samples_per_second': '3.026', 'eval_steps_per_second': '0.835', 'eval_entropy': '1.382', 'eval_num_tokens': '0', 'eval_mean_token_accuracy': '0.7064', 'epoch': 0}
+{'loss': '1.777', 'grad_norm': '0.9537', 'learning_rate': '0', 'entropy': '1.548', 'num_tokens': '2333', 'mean_token_accuracy': '0.6762', 'epoch': '0.1212'}
+{'loss': '1.594', 'grad_norm': '0.8086', 'learning_rate': '1.333e-05', 'entropy': '1.42', 'num_tokens': '1.28e+04', 'mean_token_accuracy': '0.7068', 'epoch': '0.6061'}
+{'loss': '1.537', 'grad_norm': '0.7836', 'learning_rate': '1.707e-05', 'entropy': '1.463', 'num_tokens': '2.331e+04', 'mean_token_accuracy': '0.7157', 'epoch': '1.121'}
+{'loss': '1.313', 'grad_norm': '0.8139', 'learning_rate': '5e-06', 'entropy': '1.463', 'num_tokens': '3.614e+04', 'mean_token_accuracy': '0.7407', 'epoch': '1.727'}
+{'eval_loss': '1.319', 'eval_runtime': '0.4949', 'eval_samples_per_second': '58.6', 'eval_steps_per_second': '16.17', 'eval_entropy': '1.378', 'eval_num_tokens': '4.126e+04', 'eval_mean_token_accuracy': '0.744', 'epoch': '2'}
+{'train_runtime': '65.23', 'train_samples_per_second': '8.002', 'train_steps_per_second': '0.276', 'train_loss': '1.492', 'epoch': '2'}
+Training complete. LoRA adapter saved to: ./sft-lora-phi-2-json-r32-a64-d0.05-lr2.0e-05-wd0.01
+===== DONE =====

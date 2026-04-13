@@ -1,0 +1,22 @@
+{
+  "base": {
+    "valid_rate": 0.9310344827586207,
+    "exact_match": 0.0
+  },
+  "stage1": {
+    "valid_rate": 0.8758620689655172,
+    "exact_match": 0.0
+  },
+  "stage2": {
+    "valid_rate": 0.9137931034482759,
+    "exact_match": 0.0
+  },
+  "stage2_epoch1": {
+    "valid_rate": 0.9275862068965517,
+    "exact_match": 0.0
+  },
+  "stage2_lr1e5": {
+    "valid_rate": 0.9379310344827586,
+    "exact_match": 0.0034482758620689655
+  }
+}

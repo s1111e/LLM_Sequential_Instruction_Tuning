@@ -1,0 +1,33 @@
+# Core Dependencies for Sequential Instruction Tuning Pipeline
+# Python 3.9+
+
+# Language Model & Transformers
+transformers==4.36.2
+peft==0.7.1
+bitsandbytes==0.41.2
+accelerate==0.25.0
+scipy==1.11.4
+
+# Training & Fine-tuning
+torch==2.1.1
+trl==0.7.4
+datasets==2.14.5
+
+# Data Processing
+numpy==1.24.3
+pandas==2.1.3
+scikit-learn==1.3.2
+
+# API & Configuration
+openai==1.3.5
+python-dotenv==1.0.0
+
+# JSON & Evaluation
+pydantic==2.5.0
+
+# Utilities
+tqdm==4.66.1
+
+# Development (optional)
+ipython==8.17.2
+jupyter==1.0.0

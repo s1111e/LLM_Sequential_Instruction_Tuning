@@ -1,0 +1,5722 @@
+[
+  {
+    "task": "classification",
+    "instruction": "Classify sentiment and return JSON",
+    "input": "Terrible experience.",
+    "output": {
+      "sentiment": "negative",
+      "confidence": 0.92
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 58, City: Paris",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 58,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in London and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in Paris and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 43, City: New York",
+    "output": {
+      "person": {
+        "age": 43,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 42, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 42,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 30, City: New York",
+    "output": {
+      "person": {
+        "age": 30,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Berlin and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "repair",
+    "instruction": "Fix invalid JSON",
+    "input": "{name: John, age: 25",
+    "output": {
+      "name": "John",
+      "age": 25
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 23, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 23,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "classification",
+    "instruction": "Classify sentiment and return JSON",
+    "input": "Absolutely fantastic!",
+    "output": {
+      "sentiment": "positive",
+      "confidence": 0.92
+    }
+  },
+  {
+    "task": "classification",
+    "instruction": "Classify sentiment and return JSON",
+    "input": "I hate this item.",
+    "output": {
+      "sentiment": "negative",
+      "confidence": 0.87
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 45, City: London",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 45,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 33, City: London",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 33,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "classification",
+    "instruction": "Classify sentiment and return JSON",
+    "input": "This product is amazing!",
+    "output": {
+      "sentiment": "positive",
+      "confidence": 0.92
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in New York and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "instruction": "Classify sentiment and return JSON",
+    "input": "Not bad, could be better.",
+    "output": {
+      "sentiment": "neutral",
+      "confidence": 0.6
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in San Antonio and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 57, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 57,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in Berlin and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in San Antonio and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in San Antonio and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in Paris and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 33, City: Paris",
+    "output": {
+      "person": {
+        "age": 33,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 31, City: New York",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 31,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in London and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 47, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 47,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in San Antonio and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 51, City: New York",
+    "output": {
+      "person": {
+        "age": 51,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Alice"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in Paris and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 31, City: New York",
+    "output": {
+      "person": {
+        "age": 31,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Berlin and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in New York and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 23, City: New York",
+    "output": {
+      "person": {
+        "age": 23,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in Paris and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 50, City: New York",
+    "output": {
+      "person": {
+        "age": 50,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 59, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 59,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 32, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 32,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 47, City: New York",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 47,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 59, City: London",
+    "output": {
+      "person": {
+        "age": 59,
+        "location": {
+          "city": "London"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 41, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 41,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in San Antonio and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in London and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 46, City: New York",
+    "output": {
+      "person": {
+        "age": 46,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Maria Rodriguez"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in New York and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in Paris and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 35, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 35,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in London and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in New York and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 30, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 30,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 41, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 41,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 28, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 28,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in San Antonio and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in San Antonio and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in London and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 22, City: New York",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 22,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 21, City: Paris",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 21,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 30, City: London",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 30,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in London and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 41, City: New York",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 41,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in London and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 34, City: Paris",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 34,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 39, City: Berlin",
+    "output": {
+      "person": {
+        "age": 39,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in London and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 28, City: Paris",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 28,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 42, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 42,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in London and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 22, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 22,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Berlin and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 49, City: New York",
+    "output": {
+      "person": {
+        "age": 49,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 39, City: New York",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 39,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 24, City: New York",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 24,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 56, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 56,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 50, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 50,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 57, City: Paris",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 57,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 45, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 45,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Paris and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 46, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 46,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 36, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 36,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 29, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 29,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 60, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 60,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 53, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 53,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in New York and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in San Antonio and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in Paris and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Paris and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 53, City: London",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 53,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 34, City: New York",
+    "output": {
+      "person": {
+        "age": 34,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in San Antonio and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 33, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 33,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 45, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 45,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in New York and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 48, City: Paris",
+    "output": {
+      "person": {
+        "age": 48,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Alice"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in New York and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 21, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 21,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 35, City: Paris",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 35,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 37, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 37,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Berlin and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 47, City: Paris",
+    "output": {
+      "person": {
+        "age": 47,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 36, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 36,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 49, City: London",
+    "output": {
+      "person": {
+        "age": 49,
+        "location": {
+          "city": "London",
+          "country": "United Kingdom"
+        },
+        "name": "Maria Rodriguez"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in New York and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 34, City: London",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 34,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in New York and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 27, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 27,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 33, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 33,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 58, City: Paris",
+    "output": {
+      "person": {
+        "age": 58,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 48, City: Paris",
+    "output": {
+      "person": {
+        "age": 48,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 42, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 42,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 49, City: Paris",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 49,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in Berlin and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in San Antonio and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 21, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 21,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in San Antonio and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 33, City: London",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 33,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in New York and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 59, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 59,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 42, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 42,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 51, City: Paris",
+    "output": {
+      "person": {
+        "age": 51,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Alice"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 42, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 42,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in Berlin and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in San Antonio and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in New York and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in Paris and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Berlin and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 58, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 58,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 48, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 48,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 53, City: New York",
+    "output": {
+      "person": {
+        "age": 53,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in San Antonio and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in New York and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 22, City: Paris",
+    "output": {
+      "person": {
+        "age": 22,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 40, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 40,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Paris and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 59, City: London",
+    "output": {
+      "person": {
+        "age": 59,
+        "location": {
+          "city": "London"
+        },
+        "name": "Alice"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 47, City: London",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 47,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 52, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 52,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in San Antonio and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 43, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 43,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 25, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 25,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 24, City: New York",
+    "output": {
+      "person": {
+        "age": 24,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 60, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 60,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in London and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 49, City: Paris",
+    "output": {
+      "person": {
+        "age": 49,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 40, City: Berlin",
+    "output": {
+      "person": {
+        "age": 40,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Paris and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 58, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 58,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 30, City: London",
+    "output": {
+      "person": {
+        "age": 30,
+        "location": {
+          "city": "London"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 45, City: New York",
+    "output": {
+      "person": {
+        "age": 45,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 26, City: Berlin",
+    "output": {
+      "person": {
+        "age": 26,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 37, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 37,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 34, City: Berlin",
+    "output": {
+      "person": {
+        "age": 34,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 21, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 21,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 38, City: New York",
+    "output": {
+      "person": {
+        "age": 38,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 36, City: New York",
+    "output": {
+      "person": {
+        "age": 36,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Maria"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in London and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 25, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 25,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 57, City: London",
+    "output": {
+      "person": {
+        "age": 57,
+        "location": {
+          "city": "London"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in London and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 33, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 33,
+        "location": {
+          "city": "San Antonio",
+          "state": "Texas"
+        },
+        "name": "Bob Johnson"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 37, City: New York",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 37,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in London and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in New York and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 56, City: Paris",
+    "output": {
+      "person": {
+        "age": 56,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Maria"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 27, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 27,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 35, City: Berlin",
+    "output": {
+      "person": {
+        "age": 35,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 31, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 31,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 46, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 46,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 55, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 55,
+        "location": {
+          "city": "San Antonio",
+          "state": "Texas"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in Berlin and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in New York and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Paris and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in New York and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": []
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in New York and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "New York",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "New York"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in London and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 21, City: New York",
+    "output": {
+      "person": {
+        "age": 21,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 26, City: New York",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 26,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 26, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 26,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Paris and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 58, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 58,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Berlin and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 51, City: New York",
+    "output": {
+      "person": {
+        "age": 51,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 40, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 40,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 49, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 49,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 26, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 26,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 38, City: New York",
+    "output": {
+      "person": {
+        "age": 38,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Maria Rodriguez"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in San Antonio and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in San Antonio and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 29, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 29,
+        "location": {
+          "city": "San Antonio",
+          "state": "Texas"
+        },
+        "name": "Maria Rodriguez"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in London and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 52, City: New York",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 52,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 25, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 25,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 21, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 21,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in Berlin and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in Berlin and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 44, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 44,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 34, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 34,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in Berlin and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 34, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 34,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 52, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 52,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 20, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 20,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 54, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 54,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in London and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 30, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 30,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 27, City: London",
+    "output": {
+      "person": {
+        "age": 27,
+        "location": {
+          "city": "London"
+        },
+        "name": "Maria"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 51, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 51,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 60, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 60,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 39, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 39,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 51, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 51,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 38, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 38,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 56, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 56,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 37, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 37,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 39, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 39,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 56, City: New York",
+    "output": {
+      "person": {
+        "age": 56,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in London and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in Berlin and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 44, City: Paris",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 44,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 46, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 46,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 44, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 44,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in London and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in Paris and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Paris and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 58, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 58,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 59, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 59,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 31, City: Paris",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 31,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 22, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 22,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 60, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 60,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 27, City: New York",
+    "output": {
+      "person": {
+        "age": 27,
+        "location": {
+          "city": "New York"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 51, City: London",
+    "output": {
+      "person": {
+        "age": 51,
+        "location": {
+          "city": "London"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 39, City: London",
+    "output": {
+      "person": {
+        "age": 39,
+        "location": {
+          "city": "London"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in London and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 48, City: Berlin",
+    "output": {
+      "person": {
+        "age": 48,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Paris and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 55, City: Paris",
+    "output": {
+      "person": {
+        "age": 55,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Alice"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 43, City: Paris",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 43,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in San Antonio and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 30, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 30,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 46, City: London",
+    "output": {
+      "person": {
+        "age": 46,
+        "location": {
+          "city": "London"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 25, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 25,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in San Antonio and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 44, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 44,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 26, City: London",
+    "output": {
+      "person": {
+        "age": 26,
+        "location": {
+          "city": "London"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 55, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 55,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 28, City: Paris",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 28,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 40, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 40,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in San Antonio and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 52, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 52,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 39, City: Paris",
+    "output": {
+      "person": {
+        "age": 39,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 55, City: London",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 55,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 49, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 49,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 36, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 36,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 43, City: New York",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 43,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 54, City: Paris",
+    "output": {
+      "person": {
+        "age": 54,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 22, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 22,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 29, City: New York",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 29,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 50, City: London",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 50,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 42, City: London",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 42,
+        "location": {
+          "city": "New London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Paris and works at UTSA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "UTSA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "UTSA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 38, City: New York",
+    "output": {
+      "person": {
+        "age": 38,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Alice Johnson"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 56, City: New York",
+    "output": {
+      "person": {
+        "age": 56,
+        "location": {
+          "city": "New York",
+          "country": "USA"
+        },
+        "name": "Maria Rodriguez"
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Alice lives in London and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "Alice",
+          "type": "person"
+        },
+        {
+          "name": "London",
+          "type": "location"
+        },
+        {
+          "name": "NASA",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Alice",
+          "predicate": "lives in",
+          "object": "London"
+        },
+        {
+          "subject": "Alice",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 60, City: London",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 60,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 32, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 32,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 27, City: London",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 27,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 26, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 26,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 33, City: New York",
+    "output": {
+      "person": {
+        "age": 33,
+        "location": {
+          "city": "New York"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 20, City: London",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 20,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 30, City: Paris",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 30,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 31, City: Berlin",
+    "output": {
+      "person": {
+        "name": "John",
+        "age": 31,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Maria, Age: 46, City: Paris",
+    "output": {
+      "person": {
+        "name": "Maria",
+        "age": 46,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Bob lives in Berlin and works at Amazon.",
+    "output": {
+      "entities": [
+        {
+          "name": "Bob",
+          "type": "person"
+        },
+        {
+          "name": "Berlin",
+          "type": "location"
+        },
+        {
+          "name": "Amazon",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Bob",
+          "predicate": "lives in",
+          "object": "Berlin"
+        },
+        {
+          "subject": "Bob",
+          "predicate": "works at",
+          "object": "Amazon"
+        }
+      ]
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Maria lives in San Antonio and works at Google.",
+    "output": {
+      "entities": [
+        {
+          "name": "Maria",
+          "type": "person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "location"
+        },
+        {
+          "name": "Google",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Maria",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "Maria",
+          "predicate": "works at",
+          "object": "Google"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 41, City: Paris",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 41,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 28, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 28,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 55, City: London",
+    "output": {
+      "person": {
+        "age": 55,
+        "location": {
+          "city": "London"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 42, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 42,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 49, City: London",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 49,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 42, City: London",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 42,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 47, City: London",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 47,
+        "location": {
+          "city": "London"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "Sefa lives in Paris and works at Microsoft.",
+    "output": {
+      "entities": [
+        {
+          "name": "Sefa",
+          "type": "person"
+        },
+        {
+          "name": "Paris",
+          "type": "location"
+        },
+        {
+          "name": "Microsoft",
+          "type": "organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "Sefa",
+          "predicate": "lives in",
+          "object": "Paris"
+        },
+        {
+          "subject": "Sefa",
+          "predicate": "works at",
+          "object": "Microsoft"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 54, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 54,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "Bob"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 60, City: Berlin",
+    "output": {
+      "person": {
+        "age": 60,
+        "location": {
+          "city": "Berlin"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 25, City: New York",
+    "output": {
+      "person": {
+        "age": 25,
+        "location": {
+          "city": "New York"
+        },
+        "name": "John"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 22, City: Paris",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 22,
+        "location": {
+          "city": "Paris"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 48, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 48,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "extraction",
+    "instruction": "Extract entities into JSON",
+    "input": "John lives in San Antonio and works at NASA.",
+    "output": {
+      "entities": [
+        {
+          "name": "John",
+          "type": "Person"
+        },
+        {
+          "name": "San Antonio",
+          "type": "Location"
+        },
+        {
+          "name": "NASA",
+          "type": "Organization"
+        }
+      ],
+      "relations": [
+        {
+          "subject": "John",
+          "predicate": "lives in",
+          "object": "San Antonio"
+        },
+        {
+          "subject": "John",
+          "predicate": "works at",
+          "object": "NASA"
+        }
+      ]
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 43, City: Paris",
+    "output": {
+      "person": {
+        "age": 43,
+        "location": {
+          "city": "Paris"
+        },
+        "name": "Sefa"
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Bob, Age: 36, City: San Antonio",
+    "output": {
+      "person": {
+        "name": "Bob",
+        "age": 36,
+        "location": {
+          "city": "San Antonio"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Sefa, Age: 36, City: New York",
+    "output": {
+      "person": {
+        "name": "Sefa",
+        "age": 36,
+        "location": {
+          "city": "New York"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: Alice, Age: 31, City: Berlin",
+    "output": {
+      "person": {
+        "name": "Alice",
+        "age": 31,
+        "location": {
+          "city": "Berlin"
+        }
+      }
+    }
+  },
+  {
+    "task": "schema",
+    "instruction": "Generate JSON following schema",
+    "input": "Name: John, Age: 20, City: San Antonio",
+    "output": {
+      "person": {
+        "age": 20,
+        "location": {
+          "city": "San Antonio"
+        },
+        "name": "John"
+      }
+    }
+  }
+]

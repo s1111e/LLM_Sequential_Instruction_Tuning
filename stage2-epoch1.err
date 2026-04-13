@@ -1,0 +1,31 @@
+warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/453 [00:00<?, ?it/s]Loading weights: 100%|██████████| 453/453 [00:00<00:00, 17142.16it/s]
+Loading weights:   0%|          | 0/384 [00:00<?, ?it/s]Loading weights: 100%|██████████| 384/384 [00:00<00:00, 15197.18it/s]
+/work/amd456/llm_clean_env/lib/python3.10/site-packages/peft/mapping_func.py:72: UserWarning: You are trying to modify a model with PEFT for a second time. If you want to reload the model with a different config, make sure to call `.unload()` before.
+  warnings.warn(
+/work/amd456/llm_clean_env/lib/python3.10/site-packages/peft/tuners/tuners_utils.py:285: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+Adding EOS to train dataset:   0%|          | 0/261 [00:00<?, ? examples/s]Adding EOS to train dataset: 100%|██████████| 261/261 [00:00<00:00, 12106.58 examples/s]
+Tokenizing train dataset:   0%|          | 0/261 [00:00<?, ? examples/s]Tokenizing train dataset: 100%|██████████| 261/261 [00:00<00:00, 2722.96 examples/s]
+Adding EOS to eval dataset:   0%|          | 0/29 [00:00<?, ? examples/s]Adding EOS to eval dataset: 100%|██████████| 29/29 [00:00<00:00, 9947.24 examples/s]
+Tokenizing eval dataset:   0%|          | 0/29 [00:00<?, ? examples/s]Tokenizing eval dataset: 100%|██████████| 29/29 [00:00<00:00, 3266.50 examples/s]
+[RANK 0] Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 50256}.
+  0%|          | 0/9 [00:00<?, ?it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 38%|███▊      | 3/8 [00:00<00:00, 23.21it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00, 17.44it/s][A
+100%|██████████| 8/8 [00:00<00:00, 17.47it/s][A                                     
+                                             [A  0%|          | 0/9 [00:01<?, ?it/s]
+100%|██████████| 8/8 [00:00<00:00, 17.47it/s][A
+                                             [A 11%|█         | 1/9 [00:04<00:33,  4.19s/it]                                              11%|█         | 1/9 [00:04<00:33,  4.19s/it] 22%|██▏       | 2/9 [00:07<00:23,  3.40s/it] 33%|███▎      | 3/9 [00:10<00:19,  3.24s/it] 44%|████▍     | 4/9 [00:12<00:15,  3.09s/it] 56%|█████▌    | 5/9 [00:15<00:11,  3.00s/it]                                              56%|█████▌    | 5/9 [00:15<00:11,  3.00s/it] 67%|██████▋   | 6/9 [00:18<00:09,  3.02s/it] 78%|███████▊  | 7/9 [00:21<00:05,  2.96s/it] 89%|████████▉ | 8/9 [00:24<00:02,  2.99s/it]100%|██████████| 9/9 [00:25<00:00,  2.28s/it]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 38%|███▊      | 3/8 [00:00<00:00, 26.03it/s][A
+ 75%|███████▌  | 6/8 [00:00<00:00, 18.56it/s][A
+100%|██████████| 8/8 [00:00<00:00, 18.14it/s][A                                             
+                                             [A100%|██████████| 9/9 [00:25<00:00,  2.28s/it]
+100%|██████████| 8/8 [00:00<00:00, 18.14it/s][A
+                                             [A                                             100%|██████████| 9/9 [00:29<00:00,  2.28s/it]100%|██████████| 9/9 [00:29<00:00,  3.29s/it]
+[rank0]:[W407 19:49:36.144151199 ProcessGroupNCCL.cpp:1250] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())

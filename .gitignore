@@ -1,0 +1,45 @@
+# Model Checkpoints (too large for git)
+sft-lora-*/
+checkpoint-*/
+
+# Python & Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+
+# Jupyter & IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Large Data Files (keep JSON results only)
+*.pt
+*.bin
+*.safetensors
+*.pth
+adapter_config.json (except in results)
+
+# HPC Logs (optional - keep if you want)
+# *.out
+# *.err
+
+# Temporary Files
+*.tmp
+*.temp
+.cache/
