@@ -20,8 +20,8 @@
 
 ```bash
 cd /path/to/project
-git clone <your-repo-url>
-cd HW3
+git clone https://github.com/s1111e/LLM_Sequential_Instruction_Tuning.git
+cd LLM_Sequential_Instruction_Tuning
 
 # Create virtual environment
 python -m venv venv
@@ -79,13 +79,11 @@ pip install -r requirements.txt
 Create `.env` file:
 
 ```bash
-# Teacher Model API (if using external API)
-OPENAI_API_KEY=your_key_here
-TEACHER_MODEL_BASE_URL=http://10.246.100.230/v1
-TEACHER_MODEL_NAME=llama-3.3-70b-instruct-awq
-
-# UTSA HPC configs
-HPC_EMAIL=your_email@utsa.edu
+# Teacher Model API Configuration (optional)
+# Uncomment if using external teacher model API
+# OPENAI_API_KEY=your_api_key_here
+# TEACHER_MODEL_BASE_URL=http://10.246.100.230/v1
+# TEACHER_MODEL_NAME=llama-3.3-70b-instruct-awq
 ```
 
 ---
