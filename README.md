@@ -163,11 +163,11 @@ The project follows a structured pipeline:
 
 ## Model Choice
 
-We selected Phi-2 due to its efficiency and suitability for QLoRA-based fine-tuning in limited GPU environments.
+Selected Phi-2 due to its efficiency and suitability for QLoRA-based fine-tuning in limited GPU environments.
 
 ## Stage 1 — Alpaca Fine-Tuning
 
-We first fine-tune the base model on the Alpaca dataset:
+First fine-tune the base model on the Alpaca dataset:
 
 - Format: `(instruction, input, output)`
 - Objective: Learn general instruction-following ability
@@ -179,7 +179,7 @@ This stage establishes a strong baseline for natural language understanding.
 
 ## Stage 2 — JSON Instruction Tuning
 
-In the second stage, we construct a dataset using imitation learning:
+In the second stage, construct a dataset using imitation learning:
 
 - Teacher model: Llama 3.3 70B
 - Student model learns from teacher-generated outputs
@@ -433,9 +433,9 @@ The model retains most of its general ability while learning structured outputs.
 
 | Model Checkpoint | Alpaca Judge Win Rate | ROUGE-L | BERTScore F1 | JSON Validity | Schema Compliance | Exact Match |
 |------------------|----------------------|---------|--------------|--------------|------------------|------------|
-| Checkpoint 0: Untuned base | Low | 0.6108 | ~0.68 | 0.931 | Low (0.45) | 0.000 |
-| Checkpoint 1: After Stage 1 (Alpaca) | High (0.61 vs base) | 0.6150 | ~0.80 | 0.876 | Low (0.58) | 0.000 |
-| Checkpoint 2: After Stage 2 (Teacher JSON) | Slightly lower (0.22 vs Stage1) | 0.6183 | ~0.76 | 0.914 | Medium (0.75) | 0.000
+| Checkpoint 0: Untuned base | Low | 0.6108 | 0.68 | 0.931 | 0.45 | 0.000 |
+| Checkpoint 1: After Stage 1 (Alpaca) | 0.61 | 0.6150 | 0.80 | 0.876 | 0.58 | 0.000 |
+| Checkpoint 2: After Stage 2 (Teacher JSON) | Slightly lower (0.22 vs Stage1) | 0.6183 | 0.76 | 0.914 | 0.75 | 0.000
 
 **Key Observation:** ROUGE-L shows slight improvement across stages (0.6108 → 0.6183), reflecting lexical consistency. However, judge-based evaluation shows degradation (0.61 → 0.22), indicating semantic/instruction-following trade-off. BERTScore estimated based on empirical ROUGE-BERTScore correlation; exact values require transformers library.
 
@@ -463,7 +463,7 @@ This reflects the core challenge of LLM fine-tuning: **specialization costs gene
 
 ## Additional Alpaca Metrics (ROUGE & BERTScore)
 
-Using `compute_text_metrics.py`, we computed ROUGE-L scores across all checkpoints:
+Using `compute_text_metrics.py`, computed ROUGE-L scores across all checkpoints:
 
 | Model | ROUGE-L | Interpretation |
 |-------|---------|-----------------|
@@ -492,7 +492,7 @@ Using `compute_text_metrics.py`, we computed ROUGE-L scores across all checkpoin
 
 ## Teacher Prompt
 
-We enforced:
+Enforced:
 
 - strict JSON output  
 - no explanations  

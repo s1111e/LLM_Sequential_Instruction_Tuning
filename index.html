@@ -384,10 +384,10 @@ pip install -r requirements.txt</code></pre>
         <h2 id="methodology">Methodology</h2>
 
         <h3>Model Choice</h3>
-        <p>We selected Phi-2 due to its efficiency and suitability for QLoRA-based fine-tuning in limited GPU environments.</p>
+        <p>Selected Phi-2 due to its efficiency and suitability for QLoRA-based fine-tuning in limited GPU environments.</p>
 
         <h3>Stage 1 — Alpaca Fine-Tuning</h3>
-        <p>We first fine-tune the base model on the Alpaca dataset to learn general instruction-following ability.</p>
+        <p>First fine-tune the base model on the Alpaca dataset to learn general instruction-following ability.</p>
         <ul>
             <li><strong>Format:</strong> (instruction, input, output)</li>
             <li><strong>Objective:</strong> Learn general instruction-following ability</li>
@@ -395,7 +395,7 @@ pip install -r requirements.txt</code></pre>
         </ul>
 
         <h3>Stage 2 — JSON Instruction Tuning</h3>
-        <p>In the second stage, we construct a dataset using imitation learning from a teacher model:</p>
+        <p>In the second stage, construct a dataset using imitation learning from a teacher model:</p>
         <ul>
             <li><strong>Teacher model:</strong> Llama 3.3 70B</li>
             <li><strong>Student learns from teacher-generated outputs</strong></li>
@@ -734,7 +734,7 @@ python json_metrics.py</code></pre>
 
         <footer>
             <p><strong>📊 Sequential Instruction Tuning - HW3 Assignment</strong></p>
-            <p>UTSA AI Lab | Dr. Peyman Najafirad | TA: Mohammad Bahrami</p>
+            <p>UTSA- NATURAL LANGUAGE PROCESSING WITH LARGE LANGUAGE MODELS | Dr. Peyman Najafirad | TA: Mohammad Bahrami</p>
             <p style="margin-top: 15px; font-size: 0.9em;">
                 <a href="https://github.com/s1111e/LLM_Sequential_Instruction_Tuning/blob/main/README.md">📄 Full Technical Report</a> | 
                 <a href="https://github.com/s1111e/LLM_Sequential_Instruction_Tuning">💻 GitHub Repository</a>
